@@ -1,6 +1,13 @@
 name: Delövning 2 - Parallella och sekventiella jobb
 
 on:
+  push:
+    tags-ignore:
+      - '*'
+    branches:
+      - 'master'
+  pull_request:
+  
   workflow_dispatch:
 
 jobs:
