@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Skapar log.txt
-        run: echo "Detta är en textfil">message.txt
+        run: echo "Detta är en textfil">log.txt
       - name: Laddar upp loggfilen som artifact
         uses: actions/upload-artifact@v4 # 2a. vilken action kan användas här?
         with:
