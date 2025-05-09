@@ -1,11 +1,15 @@
 name: Delövning 4 - Triggers
 
 on:
-  # 1. trigga på commit
-  # 2. trigga på pull request
+  
+  push:      # 1. Triggar vid commit (push)
+  pull_request:  # 2. Triggar vid pull request
+
 jobs:
   trigger-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo info        
-        run: echo "Workflow triggat av ..." # TODO: uppdatera texten
+      - name: Echo trigger info        
+        run: |
+          echo "Workflow triggas av:{{ github.event_name}} "
+          echo "Gren: ${{ github.ref }}"
